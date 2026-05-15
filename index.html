@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -15,846 +14,842 @@
      Cores: rosa #8E1F49 | marrom #6D4C2C | azul #2E5A87
      ===================================================== */
 
-:root {
-–rosa: #8E1F49;
-–rosa-hover: #761739;
-–rosa-claro: #F5E1E9;
-–rosa-suave: #FBF1F4;
-–marrom: #6D4C2C;
-–marrom-claro: #C9A87C;
-–azul: #2E5A87;
-–branco: #FFFFFF;
-–offwhite: #FAF8F5;
-–cinza-50: #F5F2EE;
-–cinza-100: #EBE5DD;
-–cinza-200: #D8CFC2;
-–cinza-300: #B8AB99;
-–cinza-400: #8A7F70;
-–cinza-500: #5C5448;
-–cinza-600: #3D362D;
-–cinza-700: #2A2520;
-–verde: #3D6B4A;
-–laranja: #A85F2A;
-–vermelho: #8B2E2E;
+  :root {
+    --rosa: #8E1F49;
+    --rosa-hover: #761739;
+    --rosa-claro: #F5E1E9;
+    --rosa-suave: #FBF1F4;
+    --marrom: #6D4C2C;
+    --marrom-claro: #C9A87C;
+    --azul: #2E5A87;
+    --branco: #FFFFFF;
+    --offwhite: #FAF8F5;
+    --cinza-50: #F5F2EE;
+    --cinza-100: #EBE5DD;
+    --cinza-200: #D8CFC2;
+    --cinza-300: #B8AB99;
+    --cinza-400: #8A7F70;
+    --cinza-500: #5C5448;
+    --cinza-600: #3D362D;
+    --cinza-700: #2A2520;
+    --verde: #3D6B4A;
+    --laranja: #A85F2A;
+    --vermelho: #8B2E2E;
 
-```
---fonte-display: 'Fraunces', Georgia, serif;
---fonte-corpo: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --fonte-display: 'Fraunces', Georgia, serif;
+    --fonte-corpo: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
---shadow-xs: 0 1px 2px rgba(45, 35, 25, 0.04);
---shadow-sm: 0 2px 8px rgba(45, 35, 25, 0.05);
---shadow-md: 0 8px 24px rgba(45, 35, 25, 0.07);
---shadow-lg: 0 16px 40px rgba(45, 35, 25, 0.10);
+    --shadow-xs: 0 1px 2px rgba(45, 35, 25, 0.04);
+    --shadow-sm: 0 2px 8px rgba(45, 35, 25, 0.05);
+    --shadow-md: 0 8px 24px rgba(45, 35, 25, 0.07);
+    --shadow-lg: 0 16px 40px rgba(45, 35, 25, 0.10);
 
---r-sm: 6px;
---r-md: 10px;
---r-lg: 14px;
---r-xl: 22px;
-```
-
-}
-
-- {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --r-sm: 6px;
+    --r-md: 10px;
+    --r-lg: 14px;
+    --r-xl: 22px;
   }
 
-html, body {
-font-family: var(–fonte-corpo);
-background: var(–offwhite);
-color: var(–cinza-700);
-min-height: 100vh;
-overscroll-behavior: none;
-font-size: 15px;
-line-height: 1.5;
-letter-spacing: -0.005em;
-}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-padding: 0 0 100px 0;
-}
+  html, body {
+    font-family: var(--fonte-corpo);
+    background: var(--offwhite);
+    color: var(--cinza-700);
+    min-height: 100vh;
+    overscroll-behavior: none;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
 
-/* ===== HEADER ===== */
-.app-header {
-background: rgba(250, 248, 245, 0.85);
-backdrop-filter: saturate(180%) blur(20px);
--webkit-backdrop-filter: saturate(180%) blur(20px);
-border-bottom: 1px solid var(–cinza-100);
-padding: 14px 24px;
-position: sticky;
-top: 0;
-z-index: 100;
-}
-.header-inner {
-max-width: 560px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 12px;
-}
-.marca {
-display: flex;
-flex-direction: column;
-line-height: 1;
-}
-.marca-nome {
-font-family: var(–fonte-display);
-font-size: 22px;
-font-weight: 500;
-color: var(–marrom);
-letter-spacing: -0.02em;
-font-variation-settings: “opsz” 144;
-}
-.marca-tagline {
-font-size: 10px;
-text-transform: uppercase;
-letter-spacing: 0.16em;
-color: var(–cinza-400);
-margin-top: 5px;
-font-weight: 500;
-}
-.unidade-badge {
-display: none;
-align-items: center;
-gap: 8px;
-background: var(–branco);
-border: 1px solid var(–cinza-100);
-color: var(–cinza-700);
-padding: 7px 8px 7px 14px;
-border-radius: 100px;
-font-size: 13px;
-font-weight: 500;
-box-shadow: var(–shadow-xs);
-}
-.unidade-badge.show { display: inline-flex; }
-.unidade-badge button {
-background: var(–cinza-50);
-border: none;
-color: var(–cinza-500);
-font-weight: 500;
-cursor: pointer;
-font-size: 11px;
-padding: 4px 10px;
-border-radius: 100px;
-font-family: var(–fonte-corpo);
-}
-.unidade-badge button:hover {
-background: var(–rosa-suave);
-color: var(–rosa);
-}
+  body {
+    padding: 0 0 100px 0;
+  }
 
-/* ===== CONTAINER ===== */
-.app {
-max-width: 560px;
-margin: 0 auto;
-padding: 40px 24px 24px;
-}
-.tela { display: none; animation: fadeIn 0.4s ease; }
-.tela.ativa { display: block; }
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(6px); }
-to { opacity: 1; transform: translateY(0); }
-}
+  /* ===== HEADER ===== */
+  .app-header {
+    background: rgba(250, 248, 245, 0.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--cinza-100);
+    padding: 14px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .marca {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .marca-nome {
+    font-family: var(--fonte-display);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--marrom);
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144;
+  }
+  .marca-tagline {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--cinza-400);
+    margin-top: 5px;
+    font-weight: 500;
+  }
+  .unidade-badge {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    background: var(--branco);
+    border: 1px solid var(--cinza-100);
+    color: var(--cinza-700);
+    padding: 7px 8px 7px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: var(--shadow-xs);
+  }
+  .unidade-badge.show { display: inline-flex; }
+  .unidade-badge button {
+    background: var(--cinza-50);
+    border: none;
+    color: var(--cinza-500);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-family: var(--fonte-corpo);
+  }
+  .unidade-badge button:hover {
+    background: var(--rosa-suave);
+    color: var(--rosa);
+  }
 
-/* ===== TÍTULOS ===== */
-.saudacao {
-font-family: var(–fonte-display);
-font-size: 44px;
-font-weight: 400;
-color: var(–cinza-700);
-line-height: 1.05;
-letter-spacing: -0.03em;
-margin-bottom: 12px;
-font-variation-settings: “opsz” 144;
-}
-.saudacao em {
-font-style: italic;
-font-weight: 500;
-color: var(–rosa);
-font-variation-settings: “opsz” 144;
-}
-.subtitulo {
-font-size: 16px;
-color: var(–cinza-400);
-margin-bottom: 36px;
-font-weight: 400;
-}
-.secao-titulo {
-font-family: var(–fonte-display);
-font-size: 32px;
-font-weight: 400;
-color: var(–cinza-700);
-line-height: 1.1;
-letter-spacing: -0.025em;
-margin-bottom: 8px;
-font-variation-settings: “opsz” 144;
-}
-.secao-subtitulo {
-font-size: 15px;
-color: var(–cinza-400);
-margin-bottom: 28px;
-}
-.secao-label {
-font-size: 11px;
-font-weight: 600;
-color: var(–cinza-400);
-text-transform: uppercase;
-letter-spacing: 0.14em;
-margin: 32px 0 12px 0;
-}
+  /* ===== CONTAINER ===== */
+  .app {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 40px 24px 24px;
+  }
+  .tela { display: none; animation: fadeIn 0.4s ease; }
+  .tela.ativa { display: block; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-/* ===== CAPA — LISTA DE LOJAS (sem ícones, refinado) ===== */
-.lojas-lista {
-background: var(–branco);
-border-radius: var(–r-lg);
-border: 1px solid var(–cinza-100);
-overflow: hidden;
-box-shadow: var(–shadow-sm);
-}
-.loja-item {
-width: 100%;
-background: transparent;
-border: none;
-border-bottom: 1px solid var(–cinza-100);
-padding: 20px 24px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-cursor: pointer;
-transition: background 0.2s ease;
-text-align: left;
-font-family: var(–fonte-corpo);
-}
-.loja-item:last-child { border-bottom: none; }
-.loja-item:hover, .loja-item:active {
-background: var(–cinza-50);
-}
-.loja-info {
-display: flex;
-flex-direction: column;
-gap: 3px;
-}
-.loja-nome {
-font-family: var(–fonte-display);
-font-size: 21px;
-font-weight: 500;
-color: var(–cinza-700);
-letter-spacing: -0.015em;
-line-height: 1;
-font-variation-settings: “opsz” 144;
-}
-.loja-tipo {
-font-size: 11px;
-color: var(–cinza-400);
-text-transform: uppercase;
-letter-spacing: 0.12em;
-font-weight: 500;
-}
-.loja-seta {
-color: var(–cinza-300);
-font-size: 20px;
-line-height: 1;
-font-weight: 300;
-transition: transform 0.2s ease;
-}
-.loja-item:hover .loja-seta {
-color: var(–rosa);
-transform: translateX(3px);
-}
+  /* ===== TÍTULOS ===== */
+  .saudacao {
+    font-family: var(--fonte-display);
+    font-size: 44px;
+    font-weight: 400;
+    color: var(--cinza-700);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+    font-variation-settings: "opsz" 144;
+  }
+  .saudacao em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--rosa);
+    font-variation-settings: "opsz" 144;
+  }
+  .subtitulo {
+    font-size: 16px;
+    color: var(--cinza-400);
+    margin-bottom: 36px;
+    font-weight: 400;
+  }
+  .secao-titulo {
+    font-family: var(--fonte-display);
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--cinza-700);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+    font-variation-settings: "opsz" 144;
+  }
+  .secao-subtitulo {
+    font-size: 15px;
+    color: var(--cinza-400);
+    margin-bottom: 28px;
+  }
+  .secao-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cinza-400);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin: 32px 0 12px 0;
+  }
 
-/* ===== MENU DE MÓDULOS ===== */
-.modulos-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
-}
-@media (min-width: 480px) {
-.modulos-grid { grid-template-columns: 1fr 1fr 1fr; }
-}
-.modulo-card {
-background: var(–branco);
-border: 1px solid var(–cinza-100);
-border-radius: var(–r-lg);
-padding: 18px;
-cursor: pointer;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 14px;
-transition: all 0.2s ease;
-box-shadow: var(–shadow-xs);
-min-height: 140px;
-text-align: left;
-font-family: var(–fonte-corpo);
-position: relative;
-}
-.modulo-card:hover, .modulo-card:active {
-border-color: var(–cinza-200);
-transform: translateY(-2px);
-box-shadow: var(–shadow-md);
-}
-.modulo-icone {
-width: 36px;
-height: 36px;
-display: flex;
-align-items: center;
-justify-content: center;
-color: var(–marrom);
-flex-shrink: 0;
-}
-.modulo-icone svg {
-width: 26px;
-height: 26px;
-stroke-width: 1.6;
-}
-.modulo-info {
-display: flex;
-flex-direction: column;
-gap: 2px;
-margin-top: auto;
-}
-.modulo-nome {
-font-weight: 600;
-color: var(–cinza-700);
-font-size: 14px;
-line-height: 1.25;
-letter-spacing: -0.01em;
-}
-.modulo-desc {
-font-size: 12px;
-color: var(–cinza-400);
-line-height: 1.35;
-font-weight: 400;
-}
-.modulo-card.em-breve {
-opacity: 0.5;
-cursor: not-allowed;
-}
-.modulo-card.em-breve:hover {
-transform: none;
-box-shadow: var(–shadow-xs);
-border-color: var(–cinza-100);
-}
-.modulo-card.em-breve::after {
-content: “Em breve”;
-position: absolute;
-top: 14px;
-right: 14px;
-font-size: 9px;
-color: var(–cinza-400);
-text-transform: uppercase;
-letter-spacing: 0.1em;
-font-weight: 600;
-background: var(–cinza-50);
-padding: 3px 8px;
-border-radius: 100px;
-}
+  /* ===== CAPA — LISTA DE LOJAS (sem ícones, refinado) ===== */
+  .lojas-lista {
+    background: var(--branco);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--cinza-100);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .loja-item {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--cinza-100);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-align: left;
+    font-family: var(--fonte-corpo);
+  }
+  .loja-item:last-child { border-bottom: none; }
+  .loja-item:hover, .loja-item:active {
+    background: var(--cinza-50);
+  }
+  .loja-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .loja-nome {
+    font-family: var(--fonte-display);
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--cinza-700);
+    letter-spacing: -0.015em;
+    line-height: 1;
+    font-variation-settings: "opsz" 144;
+  }
+  .loja-tipo {
+    font-size: 11px;
+    color: var(--cinza-400);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+  }
+  .loja-seta {
+    color: var(--cinza-300);
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 300;
+    transition: transform 0.2s ease;
+  }
+  .loja-item:hover .loja-seta {
+    color: var(--rosa);
+    transform: translateX(3px);
+  }
 
-/* ===== BOTÕES ===== */
-.btn {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-background: var(–cinza-700);
-color: var(–branco);
-border: none;
-padding: 14px 24px;
-border-radius: var(–r-md);
-font-family: var(–fonte-corpo);
-font-size: 15px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.15s ease;
-text-decoration: none;
-letter-spacing: -0.005em;
-width: 100%;
-}
-.btn:hover, .btn:active {
-background: var(–cinza-600);
-transform: translateY(-1px);
-}
-.btn-primary {
-background: var(–rosa);
-}
-.btn-primary:hover {
-background: var(–rosa-hover);
-}
-.btn-secundario {
-background: var(–branco);
-color: var(–cinza-700);
-border: 1px solid var(–cinza-200);
-}
-.btn-secundario:hover {
-border-color: var(–cinza-300);
-background: var(–cinza-50);
-}
-.btn-ghost {
-background: transparent;
-color: var(–cinza-500);
-border: none;
-padding: 10px;
-font-size: 14px;
-width: auto;
-}
-.btn-link {
-background: none;
-border: none;
-color: var(–rosa);
-font-weight: 500;
-cursor: pointer;
-padding: 4px 0;
-font-size: 14px;
-font-family: var(–fonte-corpo);
-text-decoration: underline;
-text-underline-offset: 3px;
-text-decoration-thickness: 1px;
-}
+  /* ===== MENU DE MÓDULOS ===== */
+  .modulos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 480px) {
+    .modulos-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .modulo-card {
+    background: var(--branco);
+    border: 1px solid var(--cinza-100);
+    border-radius: var(--r-lg);
+    padding: 18px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-xs);
+    min-height: 140px;
+    text-align: left;
+    font-family: var(--fonte-corpo);
+    position: relative;
+  }
+  .modulo-card:hover, .modulo-card:active {
+    border-color: var(--cinza-200);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .modulo-icone {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--marrom);
+    flex-shrink: 0;
+  }
+  .modulo-icone svg {
+    width: 26px;
+    height: 26px;
+    stroke-width: 1.6;
+  }
+  .modulo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: auto;
+  }
+  .modulo-nome {
+    font-weight: 600;
+    color: var(--cinza-700);
+    font-size: 14px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .modulo-desc {
+    font-size: 12px;
+    color: var(--cinza-400);
+    line-height: 1.35;
+    font-weight: 400;
+  }
+  .modulo-card.em-breve {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .modulo-card.em-breve:hover {
+    transform: none;
+    box-shadow: var(--shadow-xs);
+    border-color: var(--cinza-100);
+  }
+  .modulo-card.em-breve::after {
+    content: "Em breve";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 9px;
+    color: var(--cinza-400);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    background: var(--cinza-50);
+    padding: 3px 8px;
+    border-radius: 100px;
+  }
 
-.voltar {
-background: none;
-border: none;
-color: var(–cinza-400);
-font-size: 13px;
-cursor: pointer;
-padding: 6px 0;
-margin-bottom: 24px;
-font-family: var(–fonte-corpo);
-display: inline-flex;
-align-items: center;
-gap: 6px;
-font-weight: 500;
-}
-.voltar:hover { color: var(–cinza-700); }
+  /* ===== BOTÕES ===== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--cinza-700);
+    color: var(--branco);
+    border: none;
+    padding: 14px 24px;
+    border-radius: var(--r-md);
+    font-family: var(--fonte-corpo);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    letter-spacing: -0.005em;
+    width: 100%;
+  }
+  .btn:hover, .btn:active {
+    background: var(--cinza-600);
+    transform: translateY(-1px);
+  }
+  .btn-primary {
+    background: var(--rosa);
+  }
+  .btn-primary:hover {
+    background: var(--rosa-hover);
+  }
+  .btn-secundario {
+    background: var(--branco);
+    color: var(--cinza-700);
+    border: 1px solid var(--cinza-200);
+  }
+  .btn-secundario:hover {
+    border-color: var(--cinza-300);
+    background: var(--cinza-50);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--cinza-500);
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    width: auto;
+  }
+  .btn-link {
+    background: none;
+    border: none;
+    color: var(--rosa);
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 0;
+    font-size: 14px;
+    font-family: var(--fonte-corpo);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
 
-/* ===== FORMS ===== */
-.campo {
-margin-bottom: 20px;
-}
-.label {
-display: block;
-font-size: 11px;
-font-weight: 600;
-color: var(–cinza-500);
-text-transform: uppercase;
-letter-spacing: 0.12em;
-margin-bottom: 8px;
-}
-.input, .select, .textarea {
-width: 100%;
-padding: 13px 14px;
-border: 1px solid var(–cinza-200);
-border-radius: var(–r-md);
-background: var(–branco);
-font-family: var(–fonte-corpo);
-font-size: 15px;
-color: var(–cinza-700);
-transition: all 0.15s;
--webkit-appearance: none;
-}
-.input:focus, .select:focus, .textarea:focus {
-outline: none;
-border-color: var(–rosa);
-box-shadow: 0 0 0 3px var(–rosa-suave);
-}
-.textarea { resize: vertical; min-height: 70px; }
-.select {
-appearance: none;
-background-image: url(“data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23908377%22%20stroke-width%3D%222%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E”);
-background-repeat: no-repeat;
-background-position: right 14px center;
-background-size: 14px;
-padding-right: 38px;
-}
+  .voltar {
+    background: none;
+    border: none;
+    color: var(--cinza-400);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 6px 0;
+    margin-bottom: 24px;
+    font-family: var(--fonte-corpo);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+  }
+  .voltar:hover { color: var(--cinza-700); }
 
-/* ===== CHIPS ===== */
-.chips {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-}
-.chip {
-background: var(–branco);
-border: 1px solid var(–cinza-200);
-color: var(–cinza-600);
-padding: 9px 16px;
-border-radius: 100px;
-font-size: 13px;
-font-weight: 500;
-cursor: pointer;
-transition: all 0.15s;
-font-family: var(–fonte-corpo);
-}
-.chip.ativo {
-background: var(–cinza-700);
-color: var(–branco);
-border-color: var(–cinza-700);
-}
-.chip:hover:not(.ativo) {
-border-color: var(–cinza-400);
-}
+  /* ===== FORMS ===== */
+  .campo {
+    margin-bottom: 20px;
+  }
+  .label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cinza-500);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+  .input, .select, .textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--cinza-200);
+    border-radius: var(--r-md);
+    background: var(--branco);
+    font-family: var(--fonte-corpo);
+    font-size: 15px;
+    color: var(--cinza-700);
+    transition: all 0.15s;
+    -webkit-appearance: none;
+  }
+  .input:focus, .select:focus, .textarea:focus {
+    outline: none;
+    border-color: var(--rosa);
+    box-shadow: 0 0 0 3px var(--rosa-suave);
+  }
+  .textarea { resize: vertical; min-height: 70px; }
+  .select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23908377%22%20stroke-width%3D%222%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+    padding-right: 38px;
+  }
 
-/* ===== BUSCA ===== */
-.busca-produto {
-position: relative;
-margin-bottom: 4px;
-}
-.busca-produto svg {
-position: absolute;
-left: 14px;
-top: 50%;
-transform: translateY(-50%);
-color: var(–cinza-300);
-pointer-events: none;
-}
-.busca-input {
-padding-left: 42px !important;
-}
+  /* ===== CHIPS ===== */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chip {
+    background: var(--branco);
+    border: 1px solid var(--cinza-200);
+    color: var(--cinza-600);
+    padding: 9px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: var(--fonte-corpo);
+  }
+  .chip.ativo {
+    background: var(--cinza-700);
+    color: var(--branco);
+    border-color: var(--cinza-700);
+  }
+  .chip:hover:not(.ativo) {
+    border-color: var(--cinza-400);
+  }
 
-/* ===== LISTA DE PRODUTOS ===== */
-.categoria-titulo {
-font-size: 11px;
-font-weight: 600;
-color: var(–cinza-400);
-text-transform: uppercase;
-letter-spacing: 0.14em;
-margin: 28px 0 10px 4px;
-}
+  /* ===== BUSCA ===== */
+  .busca-produto {
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .busca-produto svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--cinza-300);
+    pointer-events: none;
+  }
+  .busca-input {
+    padding-left: 42px !important;
+  }
 
-.produto-linha {
-background: var(–branco);
-border: 1px solid var(–cinza-100);
-border-radius: var(–r-md);
-padding: 14px 16px;
-margin-bottom: 6px;
-display: flex;
-align-items: center;
-gap: 12px;
-transition: all 0.15s;
-}
-.produto-linha.preenchido {
-border-color: var(–rosa-claro);
-background: linear-gradient(to right, var(–rosa-suave), var(–branco));
-}
-.produto-info { flex: 1; min-width: 0; }
-.produto-nome {
-font-size: 14px;
-font-weight: 500;
-color: var(–cinza-700);
-line-height: 1.3;
-letter-spacing: -0.005em;
-}
-.badge-validade {
-display: inline-block;
-font-size: 9px;
-background: var(–laranja);
-color: white;
-padding: 2px 7px;
-border-radius: 100px;
-margin-left: 8px;
-font-weight: 600;
-letter-spacing: 0.05em;
-text-transform: uppercase;
-vertical-align: middle;
-}
+  /* ===== LISTA DE PRODUTOS ===== */
+  .categoria-titulo {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cinza-400);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin: 28px 0 10px 4px;
+  }
 
-/* ===== STEPPER ===== */
-.stepper {
-display: flex;
-align-items: center;
-background: var(–cinza-50);
-border-radius: 100px;
-padding: 3px;
-border: 1px solid var(–cinza-100);
-}
-.stepper button {
-width: 30px;
-height: 30px;
-border-radius: 50%;
-border: none;
-background: var(–branco);
-color: var(–cinza-600);
-font-size: 16px;
-font-weight: 500;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: var(–fonte-corpo);
-line-height: 1;
-transition: all 0.15s;
-}
-.stepper button:hover {
-background: var(–cinza-700);
-color: white;
-}
-.stepper input {
-width: 40px;
-height: 30px;
-border: none;
-background: transparent;
-text-align: center;
-font-size: 15px;
-font-weight: 600;
-color: var(–cinza-700);
-font-family: var(–fonte-corpo);
--moz-appearance: textfield;
-}
-.stepper input::-webkit-outer-spin-button,
-.stepper input::-webkit-inner-spin-button {
--webkit-appearance: none;
-margin: 0;
-}
+  .produto-linha {
+    background: var(--branco);
+    border: 1px solid var(--cinza-100);
+    border-radius: var(--r-md);
+    padding: 14px 16px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.15s;
+  }
+  .produto-linha.preenchido {
+    border-color: var(--rosa-claro);
+    background: linear-gradient(to right, var(--rosa-suave), var(--branco));
+  }
+  .produto-info { flex: 1; min-width: 0; }
+  .produto-nome {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cinza-700);
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+  .badge-validade {
+    display: inline-block;
+    font-size: 9px;
+    background: var(--laranja);
+    color: white;
+    padding: 2px 7px;
+    border-radius: 100px;
+    margin-left: 8px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
 
-/* ===== VENCIMENTOS ===== */
-.vencimentos {
-display: none;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 8px;
-margin-top: 12px;
-padding-top: 12px;
-border-top: 1px dashed var(–cinza-200);
-}
-.produto-linha.preenchido .vencimentos { display: grid; }
-.venc-campo {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 4px;
-}
-.venc-label {
-font-size: 9px;
-font-weight: 600;
-color: var(–cinza-400);
-text-transform: uppercase;
-letter-spacing: 0.08em;
-}
-.venc-input {
-width: 100%;
-height: 34px;
-border: 1px solid var(–cinza-100);
-border-radius: var(–r-sm);
-background: var(–branco);
-text-align: center;
-font-size: 14px;
-font-weight: 600;
-color: var(–cinza-700);
-font-family: var(–fonte-corpo);
--moz-appearance: textfield;
-}
-.venc-input::-webkit-outer-spin-button,
-.venc-input::-webkit-inner-spin-button {
--webkit-appearance: none;
-margin: 0;
-}
-.venc-input:focus {
-outline: none;
-border-color: var(–rosa);
-}
+  /* ===== STEPPER ===== */
+  .stepper {
+    display: flex;
+    align-items: center;
+    background: var(--cinza-50);
+    border-radius: 100px;
+    padding: 3px;
+    border: 1px solid var(--cinza-100);
+  }
+  .stepper button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: var(--branco);
+    color: var(--cinza-600);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fonte-corpo);
+    line-height: 1;
+    transition: all 0.15s;
+  }
+  .stepper button:hover {
+    background: var(--cinza-700);
+    color: white;
+  }
+  .stepper input {
+    width: 40px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--cinza-700);
+    font-family: var(--fonte-corpo);
+    -moz-appearance: textfield;
+  }
+  .stepper input::-webkit-outer-spin-button,
+  .stepper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
-/* ===== BARRA FIXA INFERIOR ===== */
-.barra-acao {
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-background: rgba(250, 248, 245, 0.95);
-backdrop-filter: saturate(180%) blur(20px);
--webkit-backdrop-filter: saturate(180%) blur(20px);
-border-top: 1px solid var(–cinza-100);
-padding: 14px 24px calc(14px + env(safe-area-inset-bottom));
-z-index: 50;
-}
-.barra-acao-inner {
-max-width: 560px;
-margin: 0 auto;
-display: flex;
-gap: 12px;
-align-items: center;
-}
-.resumo-mini {
-flex: 1;
-font-size: 13px;
-color: var(–cinza-500);
-line-height: 1.3;
-}
-.resumo-mini strong {
-color: var(–cinza-700);
-font-weight: 600;
-}
-.btn-enviar {
-flex-shrink: 0;
-width: auto;
-padding: 13px 26px;
-font-size: 14px;
-}
+  /* ===== VENCIMENTOS ===== */
+  .vencimentos {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--cinza-200);
+  }
+  .produto-linha.preenchido .vencimentos { display: grid; }
+  .venc-campo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .venc-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--cinza-400);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .venc-input {
+    width: 100%;
+    height: 34px;
+    border: 1px solid var(--cinza-100);
+    border-radius: var(--r-sm);
+    background: var(--branco);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cinza-700);
+    font-family: var(--fonte-corpo);
+    -moz-appearance: textfield;
+  }
+  .venc-input::-webkit-outer-spin-button,
+  .venc-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .venc-input:focus {
+    outline: none;
+    border-color: var(--rosa);
+  }
 
-/* ===== TOAST ===== */
-.toast {
-position: fixed;
-bottom: 100px;
-left: 50%;
-transform: translateX(-50%) translateY(100px);
-background: var(–cinza-700);
-color: white;
-padding: 12px 22px;
-border-radius: 100px;
-font-size: 14px;
-font-weight: 500;
-box-shadow: var(–shadow-lg);
-opacity: 0;
-transition: all 0.3s ease;
-z-index: 200;
-}
-.toast.show {
-opacity: 1;
-transform: translateX(-50%) translateY(0);
-}
-.toast.erro { background: var(–vermelho); }
-.toast.sucesso { background: var(–verde); }
+  /* ===== BARRA FIXA INFERIOR ===== */
+  .barra-acao {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(250, 248, 245, 0.95);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-top: 1px solid var(--cinza-100);
+    padding: 14px 24px calc(14px + env(safe-area-inset-bottom));
+    z-index: 50;
+  }
+  .barra-acao-inner {
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .resumo-mini {
+    flex: 1;
+    font-size: 13px;
+    color: var(--cinza-500);
+    line-height: 1.3;
+  }
+  .resumo-mini strong {
+    color: var(--cinza-700);
+    font-weight: 600;
+  }
+  .btn-enviar {
+    flex-shrink: 0;
+    width: auto;
+    padding: 13px 26px;
+    font-size: 14px;
+  }
 
-/* ===== MODAL ===== */
-.modal-overlay {
-position: fixed;
-inset: 0;
-background: rgba(45, 35, 25, 0.4);
-backdrop-filter: blur(4px);
-display: none;
-align-items: flex-end;
-justify-content: center;
-z-index: 150;
-animation: fadeIn 0.2s ease;
-}
-.modal-overlay.show { display: flex; }
-.modal {
-background: var(–branco);
-width: 100%;
-max-width: 560px;
-border-radius: var(–r-xl) var(–r-xl) 0 0;
-padding: 28px 24px calc(28px + env(safe-area-inset-bottom));
-animation: slideUp 0.3s ease;
-}
-@keyframes slideUp {
-from { transform: translateY(100%); }
-to { transform: translateY(0); }
-}
-.modal h3 {
-font-family: var(–fonte-display);
-font-size: 22px;
-color: var(–cinza-700);
-margin-bottom: 18px;
-font-weight: 500;
-font-variation-settings: “opsz” 144;
-}
+  /* ===== TOAST ===== */
+  .toast {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--cinza-700);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 200;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .toast.erro { background: var(--vermelho); }
+  .toast.sucesso { background: var(--verde); }
 
-/* ===== INFO CARD ===== */
-.info-card {
-background: var(–rosa-suave);
-border-left: 3px solid var(–rosa);
-border-radius: var(–r-md);
-padding: 14px 16px;
-margin-bottom: 24px;
-font-size: 13px;
-color: var(–cinza-600);
-line-height: 1.5;
-}
-.info-card strong { color: var(–rosa); font-weight: 600; }
+  /* ===== MODAL ===== */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(45, 35, 25, 0.4);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 150;
+    animation: fadeIn 0.2s ease;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--branco);
+    width: 100%;
+    max-width: 560px;
+    border-radius: var(--r-xl) var(--r-xl) 0 0;
+    padding: 28px 24px calc(28px + env(safe-area-inset-bottom));
+    animation: slideUp 0.3s ease;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  .modal h3 {
+    font-family: var(--fonte-display);
+    font-size: 22px;
+    color: var(--cinza-700);
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-variation-settings: "opsz" 144;
+  }
 
-/* ===== SUCESSO ===== */
-.sucesso-container {
-text-align: center;
-padding: 60px 20px 20px;
-}
-.sucesso-icone {
-width: 64px;
-height: 64px;
-border-radius: 50%;
-background: var(–rosa-suave);
-color: var(–rosa);
-display: inline-flex;
-align-items: center;
-justify-content: center;
-margin-bottom: 24px;
-}
-.sucesso-icone svg { width: 32px; height: 32px; stroke-width: 2; }
+  /* ===== INFO CARD ===== */
+  .info-card {
+    background: var(--rosa-suave);
+    border-left: 3px solid var(--rosa);
+    border-radius: var(--r-md);
+    padding: 14px 16px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: var(--cinza-600);
+    line-height: 1.5;
+  }
+  .info-card strong { color: var(--rosa); font-weight: 600; }
 
-/* ===== ESTADO VAZIO ===== */
-.estado-vazio {
-text-align: center;
-padding: 48px 20px;
-color: var(–cinza-400);
-}
-.estado-vazio-icone {
-width: 48px;
-height: 48px;
-margin: 0 auto 14px;
-opacity: 0.4;
-}
-.estado-vazio-icone svg { width: 100%; height: 100%; }
-.estado-vazio p {
-font-size: 14px;
-}
+  /* ===== SUCESSO ===== */
+  .sucesso-container {
+    text-align: center;
+    padding: 60px 20px 20px;
+  }
+  .sucesso-icone {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--rosa-suave);
+    color: var(--rosa);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .sucesso-icone svg { width: 32px; height: 32px; stroke-width: 2; }
 
-/* ===== LOADER ===== */
-.loader {
-display: inline-block;
-width: 14px;
-height: 14px;
-border: 2px solid rgba(255,255,255,0.3);
-border-top-color: white;
-border-radius: 50%;
-animation: spin 0.7s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
+  /* ===== ESTADO VAZIO ===== */
+  .estado-vazio {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--cinza-400);
+  }
+  .estado-vazio-icone {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 14px;
+    opacity: 0.4;
+  }
+  .estado-vazio-icone svg { width: 100%; height: 100%; }
+  .estado-vazio p {
+    font-size: 14px;
+  }
 
-/* ===== OFFLINE ===== */
-.offline-banner {
-display: none;
-background: var(–laranja);
-color: white;
-padding: 9px 16px;
-text-align: center;
-font-size: 12px;
-font-weight: 500;
-}
-.offline-banner.show { display: block; }
+  /* ===== LOADER ===== */
+  .loader {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ===== SYNC PENDENTE ===== */
-.sync-pendente {
-background: var(–branco);
-border: 1px solid var(–cinza-200);
-border-radius: var(–r-md);
-padding: 14px 16px;
-margin-bottom: 24px;
-font-size: 13px;
-color: var(–cinza-600);
-display: flex;
-align-items: center;
-gap: 12px;
-}
-.sync-pendente strong { color: var(–cinza-700); font-weight: 600; }
+  /* ===== OFFLINE ===== */
+  .offline-banner {
+    display: none;
+    background: var(--laranja);
+    color: white;
+    padding: 9px 16px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .offline-banner.show { display: block; }
 
-/* ===== CONFERÊNCIA ===== */
-.item-conferencia {
-background: var(–branco);
-border: 1px solid var(–cinza-100);
-border-radius: var(–r-md);
-padding: 14px;
-margin-bottom: 8px;
-display: flex;
-align-items: center;
-gap: 12px;
-}
-.conf-info { flex: 1; min-width: 0; }
-.conf-produto { font-weight: 500; font-size: 14px; color: var(–cinza-700); }
-.conf-qtd { font-size: 12px; color: var(–cinza-400); margin-top: 2px; }
+  /* ===== SYNC PENDENTE ===== */
+  .sync-pendente {
+    background: var(--branco);
+    border: 1px solid var(--cinza-200);
+    border-radius: var(--r-md);
+    padding: 14px 16px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: var(--cinza-600);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .sync-pendente strong { color: var(--cinza-700); font-weight: 600; }
+
+  /* ===== CONFERÊNCIA ===== */
+  .item-conferencia {
+    background: var(--branco);
+    border: 1px solid var(--cinza-100);
+    border-radius: var(--r-md);
+    padding: 14px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .conf-info { flex: 1; min-width: 0; }
+  .conf-produto { font-weight: 500; font-size: 14px; color: var(--cinza-700); }
+  .conf-qtd { font-size: 12px; color: var(--cinza-400); margin-top: 2px; }
 </style>
-
 </head>
 <body>
 
@@ -878,296 +873,279 @@ gap: 12px;
 <main class="app">
 
   <!-- ===== TELA 1: SELEÇÃO DE UNIDADE ===== -->
-
   <section id="tela-unidade" class="tela ativa">
     <h1 class="saudacao">Olá. <em>Qual é a sua unidade?</em></h1>
     <p class="subtitulo">Selecione abaixo para começar.</p>
 
-```
-<div class="lojas-lista">
-  <button class="loja-item" onclick="selecionarUnidade('Saúde Frente')">
-    <div class="loja-info">
-      <span class="loja-nome">Saúde</span>
-      <span class="loja-tipo">Loja física</span>
+    <div class="lojas-lista">
+      <button class="loja-item" onclick="selecionarUnidade('Saúde Frente')">
+        <div class="loja-info">
+          <span class="loja-nome">Saúde</span>
+          <span class="loja-tipo">Loja física</span>
+        </div>
+        <span class="loja-seta">→</span>
+      </button>
+      <button class="loja-item" onclick="selecionarUnidade('Lapa')">
+        <div class="loja-info">
+          <span class="loja-nome">Lapa</span>
+          <span class="loja-tipo">Loja física</span>
+        </div>
+        <span class="loja-seta">→</span>
+      </button>
+      <button class="loja-item" onclick="selecionarUnidade('Moema')">
+        <div class="loja-info">
+          <span class="loja-nome">Moema</span>
+          <span class="loja-tipo">Loja física</span>
+        </div>
+        <span class="loja-seta">→</span>
+      </button>
+      <button class="loja-item" onclick="selecionarUnidade('Mooca')">
+        <div class="loja-info">
+          <span class="loja-nome">Mooca</span>
+          <span class="loja-tipo">Delivery</span>
+        </div>
+        <span class="loja-seta">→</span>
+      </button>
+      <button class="loja-item" onclick="selecionarUnidade('Centro')">
+        <div class="loja-info">
+          <span class="loja-nome">Centro</span>
+          <span class="loja-tipo">Delivery</span>
+        </div>
+        <span class="loja-seta">→</span>
+      </button>
     </div>
-    <span class="loja-seta">→</span>
-  </button>
-  <button class="loja-item" onclick="selecionarUnidade('Lapa')">
-    <div class="loja-info">
-      <span class="loja-nome">Lapa</span>
-      <span class="loja-tipo">Loja física</span>
-    </div>
-    <span class="loja-seta">→</span>
-  </button>
-  <button class="loja-item" onclick="selecionarUnidade('Moema')">
-    <div class="loja-info">
-      <span class="loja-nome">Moema</span>
-      <span class="loja-tipo">Loja física</span>
-    </div>
-    <span class="loja-seta">→</span>
-  </button>
-  <button class="loja-item" onclick="selecionarUnidade('Mooca')">
-    <div class="loja-info">
-      <span class="loja-nome">Mooca</span>
-      <span class="loja-tipo">Delivery</span>
-    </div>
-    <span class="loja-seta">→</span>
-  </button>
-  <button class="loja-item" onclick="selecionarUnidade('Centro')">
-    <div class="loja-info">
-      <span class="loja-nome">Centro</span>
-      <span class="loja-tipo">Delivery</span>
-    </div>
-    <span class="loja-seta">→</span>
-  </button>
-</div>
-```
-
   </section>
 
   <!-- ===== TELA 2: MENU ===== -->
-
   <section id="tela-menu" class="tela">
     <h2 class="secao-titulo" id="boasVindas">Boas-vindas.</h2>
     <p class="secao-subtitulo">O que você vai fazer agora?</p>
 
-```
-<div id="syncPendente" class="sync-pendente" style="display:none;">
-  <span><strong>Tem dado salvo no celular</strong> aguardando enviar. Conecte na internet pra enviar.</span>
-</div>
+    <div id="syncPendente" class="sync-pendente" style="display:none;">
+      <span><strong>Tem dado salvo no celular</strong> aguardando enviar. Conecte na internet pra enviar.</span>
+    </div>
 
-<div class="modulos-grid">
+    <div class="modulos-grid">
 
-  <!-- Contagem -->
-  <button class="modulo-card" onclick="abrirModulo('contagem')">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="7" height="7" rx="1"/>
-        <rect x="14" y="3" width="7" height="7" rx="1"/>
-        <rect x="3" y="14" width="7" height="7" rx="1"/>
-        <rect x="14" y="14" width="7" height="7" rx="1"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Contagem de Estoque</div>
-      <div class="modulo-desc">Fim do dia</div>
-    </div>
-  </button>
+      <!-- Contagem -->
+      <button class="modulo-card" onclick="abrirModulo('contagem')">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Contagem de Estoque</div>
+          <div class="modulo-desc">Fim do dia</div>
+        </div>
+      </button>
 
-  <!-- Conferência Remessa -->
-  <button class="modulo-card" onclick="abrirModulo('conferencia')">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-        <line x1="12" y1="22.08" x2="12" y2="12"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Conferência de Remessa</div>
-      <div class="modulo-desc">Recebimento</div>
-    </div>
-  </button>
+      <!-- Conferência Remessa -->
+      <button class="modulo-card" onclick="abrirModulo('conferencia')">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Conferência de Remessa</div>
+          <div class="modulo-desc">Recebimento</div>
+        </div>
+      </button>
 
-  <!-- Descarte -->
-  <button class="modulo-card" onclick="abrirModulo('descarte')">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="3 6 5 6 21 6"/>
-        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-        <line x1="10" y1="11" x2="10" y2="17"/>
-        <line x1="14" y1="11" x2="14" y2="17"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Descarte</div>
-      <div class="modulo-desc">Registrar perda</div>
-    </div>
-  </button>
+      <!-- Descarte -->
+      <button class="modulo-card" onclick="abrirModulo('descarte')">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6"/>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+            <line x1="10" y1="11" x2="10" y2="17"/>
+            <line x1="14" y1="11" x2="14" y2="17"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Descarte</div>
+          <div class="modulo-desc">Registrar perda</div>
+        </div>
+      </button>
 
-  <!-- Inventário -->
-  <button class="modulo-card em-breve">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"/>
-        <polyline points="9 7 12 4 15 7"/>
-        <line x1="12" y1="4" x2="12" y2="16"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Inventário Semanal</div>
-      <div class="modulo-desc">Suprimentos</div>
-    </div>
-  </button>
+      <!-- Inventário -->
+      <button class="modulo-card em-breve">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"/>
+            <polyline points="9 7 12 4 15 7"/>
+            <line x1="12" y1="4" x2="12" y2="16"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Inventário Semanal</div>
+          <div class="modulo-desc">Suprimentos</div>
+        </div>
+      </button>
 
-  <!-- Crédito -->
-  <button class="modulo-card em-breve">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="5" width="20" height="14" rx="2"/>
-        <line x1="2" y1="10" x2="22" y2="10"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Crédito Cliente</div>
-      <div class="modulo-desc">Pendência</div>
-    </div>
-  </button>
+      <!-- Crédito -->
+      <button class="modulo-card em-breve">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <line x1="2" y1="10" x2="22" y2="10"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Crédito Cliente</div>
+          <div class="modulo-desc">Pendência</div>
+        </div>
+      </button>
 
-  <!-- Cancelamento -->
-  <button class="modulo-card em-breve">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="15" y1="9" x2="9" y2="15"/>
-        <line x1="9" y1="9" x2="15" y2="15"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Cancelamento</div>
-      <div class="modulo-desc">Delivery</div>
-    </div>
-  </button>
+      <!-- Cancelamento -->
+      <button class="modulo-card em-breve">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Cancelamento</div>
+          <div class="modulo-desc">Delivery</div>
+        </div>
+      </button>
 
-  <!-- Saída interna -->
-  <button class="modulo-card em-breve">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M17 8l4 4-4 4"/>
-        <path d="M3 12h18"/>
-        <path d="M3 4v16"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Saída Interna</div>
-      <div class="modulo-desc">Marketing, permuta</div>
-    </div>
-  </button>
+      <!-- Saída interna -->
+      <button class="modulo-card em-breve">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8l4 4-4 4"/>
+            <path d="M3 12h18"/>
+            <path d="M3 4v16"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Saída Interna</div>
+          <div class="modulo-desc">Marketing, permuta</div>
+        </div>
+      </button>
 
-  <!-- Checklist -->
-  <button class="modulo-card em-breve">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="9 11 12 14 22 4"/>
-        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Checklist</div>
-      <div class="modulo-desc">Abertura, fechamento</div>
-    </div>
-  </button>
+      <!-- Checklist -->
+      <button class="modulo-card em-breve">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Checklist</div>
+          <div class="modulo-desc">Abertura, fechamento</div>
+        </div>
+      </button>
 
-  <!-- POPs -->
-  <button class="modulo-card em-breve">
-    <div class="modulo-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-      </svg>
-    </div>
-    <div class="modulo-info">
-      <div class="modulo-nome">Manuais</div>
-      <div class="modulo-desc">Procedimentos</div>
-    </div>
-  </button>
+      <!-- POPs -->
+      <button class="modulo-card em-breve">
+        <div class="modulo-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <div class="modulo-info">
+          <div class="modulo-nome">Manuais</div>
+          <div class="modulo-desc">Procedimentos</div>
+        </div>
+      </button>
 
-</div>
-```
-
+    </div>
   </section>
 
   <!-- ===== TELA 3: CONTAGEM ===== -->
-
   <section id="tela-contagem" class="tela">
     <button class="voltar" onclick="voltarMenu()">← Voltar</button>
     <h2 class="secao-titulo">Contagem de Estoque</h2>
     <p class="secao-subtitulo" id="contagemSubtitulo">Conte tudo no fim do turno</p>
 
-```
-<div class="info-card" id="contagemInfo"></div>
+    <div class="info-card" id="contagemInfo"></div>
 
-<div class="campo">
-  <label class="label">Quem está contando</label>
-  <select class="select" id="contagemColab">
-    <option value="">Selecione...</option>
-  </select>
-</div>
+    <div class="campo">
+      <label class="label">Quem está contando</label>
+      <select class="select" id="contagemColab">
+        <option value="">Selecione...</option>
+      </select>
+    </div>
 
-<div class="campo">
-  <label class="label">Onde está contando</label>
-  <div class="chips" id="locaisContagem"></div>
-</div>
+    <div class="campo">
+      <label class="label">Onde está contando</label>
+      <div class="chips" id="locaisContagem"></div>
+    </div>
 
-<div class="busca-produto">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="11" cy="11" r="8"/>
-    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-  </svg>
-  <input type="text" class="input busca-input" id="buscaProduto" placeholder="Buscar produto..." oninput="filtrarProdutos()">
-</div>
+    <div class="busca-produto">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" class="input busca-input" id="buscaProduto" placeholder="Buscar produto..." oninput="filtrarProdutos()">
+    </div>
 
-<div id="listaProdutos"></div>
+    <div id="listaProdutos"></div>
 
-<div style="margin-top: 28px; text-align: center;">
-  <button class="btn-link" onclick="abrirAdicionarNovo()">
-    Produto não está na lista?
-  </button>
-</div>
-```
-
+    <div style="margin-top: 28px; text-align: center;">
+      <button class="btn-link" onclick="abrirAdicionarNovo()">
+        Produto não está na lista?
+      </button>
+    </div>
   </section>
 
   <!-- ===== TELA 4: CONFERÊNCIA ===== -->
-
   <section id="tela-conferencia" class="tela">
     <button class="voltar" onclick="voltarMenu()">← Voltar</button>
     <h2 class="secao-titulo">Conferência de Remessa</h2>
     <p class="secao-subtitulo">Confira item por item o que chegou</p>
 
-```
-<div class="campo">
-  <label class="label">Quem está conferindo</label>
-  <select class="select" id="confColab">
-    <option value="">Selecione...</option>
-  </select>
-</div>
-
-<div class="campo">
-  <label class="label">Número da nota fiscal</label>
-  <input type="text" class="input" id="confNF" placeholder="Ex: 00012345" inputmode="numeric">
-</div>
-
-<div class="campo">
-  <label class="label">Horário de recebimento</label>
-  <input type="time" class="input" id="confHorario">
-</div>
-
-<h3 class="secao-label">Itens da remessa</h3>
-
-<div id="listaConferencia">
-  <div class="estado-vazio">
-    <div class="estado-vazio-icone">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-        <line x1="12" y1="22.08" x2="12" y2="12"/>
-      </svg>
+    <div class="campo">
+      <label class="label">Quem está conferindo</label>
+      <select class="select" id="confColab">
+        <option value="">Selecione...</option>
+      </select>
     </div>
-    <p>Carregando remessa planejada...</p>
-    <p style="margin-top: 10px; font-size: 12px;">Por enquanto, adicione manualmente o que recebeu.</p>
-  </div>
-</div>
 
-<div style="margin-top: 20px; text-align: center;">
-  <button class="btn-link" onclick="abrirAdicionarItemRemessa()">+ Adicionar item recebido</button>
-</div>
-```
+    <div class="campo">
+      <label class="label">Número da nota fiscal</label>
+      <input type="text" class="input" id="confNF" placeholder="Ex: 00012345" inputmode="numeric">
+    </div>
 
+    <div class="campo">
+      <label class="label">Horário de recebimento</label>
+      <input type="time" class="input" id="confHorario">
+    </div>
+
+    <h3 class="secao-label">Itens da remessa</h3>
+
+    <div id="listaConferencia">
+      <div class="estado-vazio">
+        <div class="estado-vazio-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <p>Carregando remessa planejada...</p>
+        <p style="margin-top: 10px; font-size: 12px;">Por enquanto, adicione manualmente o que recebeu.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px; text-align: center;">
+      <button class="btn-link" onclick="abrirAdicionarItemRemessa()">+ Adicionar item recebido</button>
+    </div>
   </section>
 
   <!-- ===== TELA 5: SUCESSO ===== -->
-
   <section id="tela-sucesso" class="tela">
     <div class="sucesso-container">
       <div class="sucesso-icone">
@@ -1184,7 +1162,6 @@ gap: 12px;
 </main>
 
 <!-- Barra fixa -->
-
 <div class="barra-acao" id="barraAcao" style="display:none;">
   <div class="barra-acao-inner">
     <div class="resumo-mini" id="resumoMini">
@@ -1197,11 +1174,9 @@ gap: 12px;
 </div>
 
 <!-- Toast -->
-
 <div class="toast" id="toast"></div>
 
 <!-- Modal -->
-
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <h3 id="modalTitulo">Título</h3>
@@ -1217,7 +1192,7 @@ gap: 12px;
 // =====================================================
 // CONFIGURAÇÃO
 // =====================================================
-const ENDPOINT = "https://script.google.com/macros/s/AKfycbxYNpZQAkEDHeo06BLfvigydMeiZds_dsYgBMOon8ovI4kM0-FFGvy_vY0anNy0svgLsQ/exec";
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbwVTljlkZ_k1GEPrdtQSeAvBUWRce8g6MPPuH9dygYINtHaXkd5JCbL6GNMWjRInDcx/exec";
 
 const PRODUTOS_CACHE = [
   { cat: "Potes 180ml", nome: "Pote Pistache com Geleia" },
